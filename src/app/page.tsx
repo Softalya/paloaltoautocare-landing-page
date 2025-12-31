@@ -903,17 +903,7 @@ export default function Home() {
                     'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDBRBpb7UfxRdfM3BzCfFWHkaxLWBl_Aw7Q92vaxrzXGwc6wJWsBnefKtWpGnRxhgKGUM9tMubOqc5kKgTynqvC2KcHEqdPK1XOtLOLhlQQAuyX4rle4Sl6EFENhEmoKJOE2xK5QMaQX69up9PyV-cuUbZ3cW9YnLS7O9Z3-Bw-ihxC31eMsZr5yeGQd2zWCJaI6Qa7f7GnA9fX8docDkyoSBfVWF5bPZ1heobawcbm-hahf5B8o6CO4NcM-LdhsPMnI_WqfjyRzbE")',
                 }}
               >
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                  <button
-                    className="bg-white text-slate-900 px-4 py-2 rounded-lg font-bold shadow-lg flex items-center gap-2 hover:bg-gray-100 transition-colors"
-                    type="button"
-                  >
-                    <span className="material-symbols-outlined text-primary">
-                      near_me
-                    </span>
-                    Get Directions
-                  </button>
-                </div>
+                <div className="absolute inset-0 bg-black/30" />
               </div>
             </div>
           </div>
