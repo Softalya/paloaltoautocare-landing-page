@@ -4,16 +4,18 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 w-full glass-nav border-b border-surface-border">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
-            <div className="flex-shrink-0 flex items-center gap-3">
-              <div className="size-8 text-primary">
-                <span className="material-symbols-outlined text-[32px]">
-                  car_repair
-                </span>
-              </div>
-              <span className="text-white text-lg sm:text-xl font-extrabold tracking-tight">
-                Palo Alto Auto Care
-              </span>
-            </div>
+            <a href="#" className="flex-shrink-0 flex items-center">
+              <img
+                src="/logo/palo-alto-lux-horizontal-black.svg"
+                alt="Palo Alto Auto Care"
+                className="h-7 sm:h-8 w-auto dark:hidden"
+              />
+              <img
+                src="/logo/palo-alto-lux-horizontal-white.svg"
+                alt="Palo Alto Auto Care"
+                className="h-7 sm:h-8 w-auto hidden dark:block"
+              />
+            </a>
 
             <div className="hidden md:flex flex-1 justify-center items-center gap-8">
               <a
@@ -793,12 +795,16 @@ export default function Home() {
             <div className="flex flex-col gap-8">
               <div>
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="material-symbols-outlined text-primary text-3xl">
-                    car_repair
-                  </span>
-                  <span className="text-white text-2xl font-extrabold">
-                    Palo Alto Auto Care
-                  </span>
+                  <img
+                    src="/logo/palo-alto-lux-horizontal-black.svg"
+                    alt="Palo Alto Auto Care"
+                    className="h-8 w-auto dark:hidden"
+                  />
+                  <img
+                    src="/logo/palo-alto-lux-horizontal-white.svg"
+                    alt="Palo Alto Auto Care"
+                    className="h-8 w-auto hidden dark:block"
+                  />
                 </div>
                 <p className="text-gray-400 leading-relaxed max-w-md">
                   We are a locally owned auto shop dedicated to honest work and

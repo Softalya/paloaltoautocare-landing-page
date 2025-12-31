@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Palo Alto Auto Care - Premium Auto Service",
   description: "Premium auto service in Palo Alto",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
