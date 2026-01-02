@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 export default function Home() {
    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
 
    const navigation = [
       { label: 'Home', href: '#' },
@@ -11,6 +12,66 @@ export default function Home() {
       { label: 'Pre-Owned', href: '#pre-owned' },
       { label: 'Process', href: '#process' },
       { label: 'Reviews', href: '#reviews' },
+   ];
+
+   const testimonials = [
+      {
+         text: 'Finally found a mechanic in Palo Alto I can trust. They explained everything clearly and the bill was exactly what they quoted. Highly recommended.',
+         name: 'Sarah Jenkins',
+         role: 'Local Resident',
+         avatar:
+            'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDALpUPdVaL3QJprKfbcetgnqOL_0-GAKTxVWgCUBF-Ph3Pk--8LIIE_VMUgCJuQl7aVH0gSHT48Rff6ZcpO-1Q1yu9_l3BXJ_pYCTvVwL8eK4IhcKIRNTsKHuyHhdIozfwaeDSBN_jyWB4hLRbZgHiwC2dTNm2OW26x-YDj-6F6j1kD7nOFVx4nO2pA4hzZdYgfg0Ssa6PtYDZmXcnBre4aKKCP-xTTG6W173548BuwuiJp3vbGslS-4w5joV3Pju5BhfIu88h_EI")',
+      },
+      {
+         text: 'Fast, friendly, and professional. My BMW drives like new again. The team at Palo Alto Auto Care really knows their stuff.',
+         name: 'Michael Chen',
+         role: 'BMW Owner',
+         avatar:
+            'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmYPgBtwwMFo-gKY8SPa2P8bueKZLn1qWFlpd_18afV_B4gQx62ig8Z7zO2O2bnTaGWMq4tUXnt3X3662icc5tISJkgNWtSOBkMZ4BVCWWeKNt3HZk-gG3tYPabhhfE5Wh3JJAwm2gZMuHJRIAXsDkTLRvJnFC24Q5okgDg5QEpI2bIMZSrGGilC-oICi6PrvuXvjtmRJlz-1vLI-5_9D3GZJLKk3LBaSCVN_cF0kaBLiSdowzjdr9_Wo1QbUKx5cHKV1RC_k2pmk")',
+      },
+      {
+         text: '"They squeezed me in for an emergency battery replacement. I was back on the road in under an hour. Outstanding service."',
+         name: 'David Rossi',
+         role: 'Business Owner',
+         avatar:
+            'url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0geR0bzYzI7YnX6huzqSUfO8NyCujK_EN2C3dYPX9ZaBJHbqvEcZS1LbO_ZrYZ_rJraZocuw9mOwWnMkt_kXS8QxLsx6slvQiKlRQVQ5kRwg5MTiHCyXVFvCdEW39PkD_1iuj1iSquj3DYGp3wpHCR4vk3MoGWz-T7fKIzojm38x6toJQjCciKXjPWlawO67grkW-PPh1RT-OQGnOpwTLPbroPgnqx0kv3S6ztWaNVk7cXr2Idr5txnfU5cYoPCLRjYrQa6IldcA")',
+      },
+      {
+         text: 'Clear communication, fair pricing, and exceptional workmanship. This is how automotive service should be.',
+         name: 'Andrew Miller',
+         role: 'Palo Alto',
+         avatar: null,
+      },
+      {
+         text: "I've serviced multiple vehicles here over the years. Consistently reliable, honest, and detail-oriented.",
+         name: 'Laura Stein',
+         role: 'Long-Term Client',
+         avatar: null,
+      },
+      {
+         text: 'They treated my Mercedes with the level of care I expect from a high-end service center. No shortcuts, no surprises.',
+         name: 'Jonathan Park',
+         role: 'Mercedes-Benz Owner',
+         avatar: null,
+      },
+      {
+         text: 'Scheduling was easy, service was efficient, and everything was explained upfront. Extremely professional operation.',
+         name: 'Emily Rogers',
+         role: 'Palo Alto',
+         avatar: null,
+      },
+      {
+         text: "It's rare to find a local shop that combines technical expertise with genuine customer care. Highly trustworthy.",
+         name: 'Mark Alvarez',
+         role: 'Local Business Consultant',
+         avatar: null,
+      },
+      {
+         text: 'From diagnostics to delivery, the experience was seamless. This is now my go-to auto care provider.',
+         name: 'Daniel Foster',
+         role: 'Bay Area',
+         avatar: null,
+      },
    ];
 
    const closeMobileMenu = () => setIsMobileMenuOpen(false);
@@ -548,90 +609,79 @@ export default function Home() {
                   <h3 className="text-white text-3xl md:text-4xl font-black leading-tight">What Our Clients Say</h3>
                </div>
 
-               <div className="flex flex-wrap justify-center gap-6">
-                  <div className="flex-1 min-w-[300px] max-w-[400px] bg-surface-dark p-8 rounded-2xl border border-surface-border relative">
-                     <span className="material-symbols-outlined absolute top-6 right-6 text-surface-border text-6xl opacity-20">format_quote</span>
-                     <div className="flex gap-1 text-yellow-500 mb-4">
-                        <span className="material-symbols-outlined text-sm">star</span>
-                        <span className="material-symbols-outlined text-sm">star</span>
-                        <span className="material-symbols-outlined text-sm">star</span>
-                        <span className="material-symbols-outlined text-sm">star</span>
-                        <span className="material-symbols-outlined text-sm">star</span>
-                     </div>
-                     <p className="text-gray-300 italic mb-6">
-                        Finally found a mechanic in Palo Alto I can trust. They explained everything clearly and the bill was exactly what they quoted. Highly
-                        recommended.
-                     </p>
-                     <div className="flex items-center gap-4">
-                        <div
-                           className="size-10 rounded-full bg-gray-600 bg-cover bg-center"
-                           data-alt="Portrait of a smiling customer named Sarah Jenkins"
-                           style={{
-                              backgroundImage:
-                                 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDALpUPdVaL3QJprKfbcetgnqOL_0-GAKTxVWgCUBF-Ph3Pk--8LIIE_VMUgCJuQl7aVH0gSHT48Rff6ZcpO-1Q1yu9_l3BXJ_pYCTvVwL8eK4IhcKIRNTsKHuyHhdIozfwaeDSBN_jyWB4hLRbZgHiwC2dTNm2OW26x-YDj-6F6j1kD7nOFVx4nO2pA4hzZdYgfg0Ssa6PtYDZmXcnBre4aKKCP-xTTG6W173548BuwuiJp3vbGslS-4w5joV3Pju5BhfIu88h_EI")',
-                           }}
-                        />
-                        <div>
-                           <h5 className="text-white font-bold text-sm">Sarah Jenkins</h5>
-                           <p className="text-gray-500 text-xs">Local Resident</p>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div className="flex-1 min-w-[300px] max-w-[400px] bg-surface-dark p-8 rounded-2xl border border-surface-border relative">
-                     <span className="material-symbols-outlined absolute top-6 right-6 text-surface-border text-6xl opacity-20">format_quote</span>
-                     <div className="flex gap-1 text-yellow-500 mb-4">
-                        <span className="material-symbols-outlined text-sm">star</span>
-                        <span className="material-symbols-outlined text-sm">star</span>
-                        <span className="material-symbols-outlined text-sm">star</span>
-                        <span className="material-symbols-outlined text-sm">star</span>
-                        <span className="material-symbols-outlined text-sm">star</span>
-                     </div>
-                     <p className="text-gray-300 italic mb-6">
-                        Fast, friendly, and professional. My BMW drives like new again. The team at Palo Alto Auto Care really knows their stuff.
-                     </p>
-                     <div className="flex items-center gap-4">
-                        <div
-                           className="size-10 rounded-full bg-gray-600 bg-cover bg-center"
-                           data-alt="Portrait of a smiling customer named Michael Chen"
-                           style={{
-                              backgroundImage:
-                                 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmYPgBtwwMFo-gKY8SPa2P8bueKZLn1qWFlpd_18afV_B4gQx62ig8Z7zO2O2bnTaGWMq4tUXnt3X3662icc5tISJkgNWtSOBkMZ4BVCWWeKNt3HZk-gG3tYPabhhfE5Wh3JJAwm2gZMuHJRIAXsDkTLRvJnFC24Q5okgDg5QEpI2bIMZSrGGilC-oICi6PrvuXvjtmRJlz-1vLI-5_9D3GZJLKk3LBaSCVN_cF0kaBLiSdowzjdr9_Wo1QbUKx5cHKV1RC_k2pmk")',
-                           }}
-                        />
-                        <div>
-                           <h5 className="text-white font-bold text-sm">Michael Chen</h5>
-                           <p className="text-gray-500 text-xs">BMW Owner</p>
-                        </div>
+               <div className="relative">
+                  <div className="overflow-hidden">
+                     <div
+                        className="flex gap-6 transition-transform duration-500 ease-in-out"
+                        style={{
+                           transform: `translateX(calc(-${currentTestimonialIndex} * (100% / 3)))`,
+                        }}
+                     >
+                        {testimonials.map((testimonial, index) => (
+                           <div
+                              key={index}
+                              className="flex-shrink-0 w-full md:w-[calc((100%-3rem)/3)] min-w-[300px] bg-surface-dark p-8 rounded-2xl border border-surface-border relative"
+                           >
+                              <span className="material-symbols-outlined absolute top-6 right-6 text-surface-border text-6xl opacity-20">format_quote</span>
+                              <div className="flex gap-1 text-yellow-500 mb-4">
+                                 <span className="material-symbols-outlined text-sm">star</span>
+                                 <span className="material-symbols-outlined text-sm">star</span>
+                                 <span className="material-symbols-outlined text-sm">star</span>
+                                 <span className="material-symbols-outlined text-sm">star</span>
+                                 <span className="material-symbols-outlined text-sm">star</span>
+                              </div>
+                              <p className="text-gray-300 italic mb-6">{testimonial.text}</p>
+                              <div className="flex items-center gap-4">
+                                 <div
+                                    className="size-10 rounded-full bg-gray-600 bg-cover bg-center"
+                                    data-alt={`Portrait of a smiling customer named ${testimonial.name}`}
+                                    style={testimonial.avatar ? { backgroundImage: testimonial.avatar } : {}}
+                                 />
+                                 <div>
+                                    <h5 className="text-white font-bold text-sm">{testimonial.name}</h5>
+                                    <p className="text-gray-500 text-xs">{testimonial.role}</p>
+                                 </div>
+                              </div>
+                           </div>
+                        ))}
                      </div>
                   </div>
 
-                  <div className="flex-1 min-w-[300px] max-w-[400px] bg-surface-dark p-8 rounded-2xl border border-surface-border relative">
-                     <span className="material-symbols-outlined absolute top-6 right-6 text-surface-border text-6xl opacity-20">format_quote</span>
-                     <div className="flex gap-1 text-yellow-500 mb-4">
-                        <span className="material-symbols-outlined text-sm">star</span>
-                        <span className="material-symbols-outlined text-sm">star</span>
-                        <span className="material-symbols-outlined text-sm">star</span>
-                        <span className="material-symbols-outlined text-sm">star</span>
-                        <span className="material-symbols-outlined text-sm">star</span>
+                  <div className="flex items-center justify-center gap-4 mt-8">
+                     <button
+                        onClick={() => {
+                           setCurrentTestimonialIndex((prev) => (prev === 0 ? Math.max(0, testimonials.length - 3) : prev - 1));
+                        }}
+                        className="flex items-center justify-center size-12 rounded-full bg-surface-dark border border-surface-border hover:border-primary hover:bg-primary/10 text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled={currentTestimonialIndex === 0}
+                        aria-label="Previous testimonials"
+                     >
+                        <span className="material-symbols-outlined">chevron_left</span>
+                     </button>
+
+                     <div className="flex gap-2">
+                        {Array.from({ length: Math.max(1, testimonials.length - 2) }).map((_, index) => (
+                           <button
+                              key={index}
+                              onClick={() => setCurrentTestimonialIndex(index)}
+                              className={`size-2 rounded-full transition-all duration-300 ${
+                                 currentTestimonialIndex === index ? 'bg-primary w-8' : 'bg-surface-border hover:bg-primary/50'
+                              }`}
+                              aria-label={`Go to testimonial group ${index + 1}`}
+                           />
+                        ))}
                      </div>
-                     <p className="text-gray-300 italic mb-6">
-                        "They squeezed me in for an emergency battery replacement. I was back on the road in under an hour. Outstanding service."
-                     </p>
-                     <div className="flex items-center gap-4">
-                        <div
-                           className="size-10 rounded-full bg-gray-600 bg-cover bg-center"
-                           data-alt="Portrait of a smiling customer named David Rossi"
-                           style={{
-                              backgroundImage:
-                                 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0geR0bzYzI7YnX6huzqSUfO8NyCujK_EN2C3dYPX9ZaBJHbqvEcZS1LbO_ZrYZ_rJraZocuw9mOwWnMkt_kXS8QxLsx6slvQiKlRQVQ5kRwg5MTiHCyXVFvCdEW39PkD_1iuj1iSquj3DYGp3wpHCR4vk3MoGWz-T7fKIzojm38x6toJQjCciKXjPWlawO67grkW-PPh1RT-OQGnOpwTLPbroPgnqx0kv3S6ztWaNVk7cXr2Idr5txnfU5cYoPCLRjYrQa6IldcA")',
-                           }}
-                        />
-                        <div>
-                           <h5 className="text-white font-bold text-sm">David Rossi</h5>
-                           <p className="text-gray-500 text-xs">Business Owner</p>
-                        </div>
-                     </div>
+
+                     <button
+                        onClick={() => {
+                           setCurrentTestimonialIndex((prev) => (prev >= testimonials.length - 3 ? 0 : prev + 1));
+                        }}
+                        className="flex items-center justify-center size-12 rounded-full bg-surface-dark border border-surface-border hover:border-primary hover:bg-primary/10 text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled={currentTestimonialIndex >= testimonials.length - 3}
+                        aria-label="Next testimonials"
+                     >
+                        <span className="material-symbols-outlined">chevron_right</span>
+                     </button>
                   </div>
                </div>
             </div>
