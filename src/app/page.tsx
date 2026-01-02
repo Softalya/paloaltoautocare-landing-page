@@ -803,11 +803,7 @@ export default function Home() {
                            </div>
                            <div>
                               <h5 className="text-white font-bold">Visit Us</h5>
-                              <p className="text-gray-400 text-sm">
-                                 123 El Camino Real
-                                 <br />
-                                 Palo Alto, CA 94301
-                              </p>
+                              <p className="text-gray-400 text-sm">699 San Antonio Rd Palo Alto, CA 94306 United States</p>
                            </div>
                         </div>
 
@@ -817,7 +813,7 @@ export default function Home() {
                            </div>
                            <div>
                               <h5 className="text-white font-bold">Call Us</h5>
-                              <p className="text-gray-400 text-sm">(650) 555-0199</p>
+                              <p className="text-gray-400 text-sm">+1 (650) 494-1303</p>
                            </div>
                         </div>
 
@@ -839,17 +835,26 @@ export default function Home() {
                      </div>
                   </div>
 
-                  <div className="w-full h-[300px] lg:h-auto rounded-xl overflow-hidden border border-surface-border relative bg-surface-dark">
-                     <div
-                        className="w-full h-full bg-cover bg-center opacity-80"
-                        data-alt="Map showing location of Palo Alto Auto Care"
-                        data-location="Palo Alto, California"
-                        style={{
-                           backgroundImage:
-                              'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDBRBpb7UfxRdfM3BzCfFWHkaxLWBl_Aw7Q92vaxrzXGwc6wJWsBnefKtWpGnRxhgKGUM9tMubOqc5kKgTynqvC2KcHEqdPK1XOtLOLhlQQAuyX4rle4Sl6EFENhEmoKJOE2xK5QMaQX69up9PyV-cuUbZ3cW9YnLS7O9Z3-Bw-ihxC31eMsZr5yeGQd2zWCJaI6Qa7f7GnA9fX8docDkyoSBfVWF5bPZ1heobawcbm-hahf5B8o6CO4NcM-LdhsPMnI_WqfjyRzbE")',
-                        }}
-                     >
-                        <div className="absolute inset-0 bg-black/30" />
+                  <div className="w-full h-[300px] lg:h-[400px] rounded-xl overflow-hidden border border-surface-border relative bg-surface-dark group">
+                     <a
+                        href="https://www.google.com/maps/place/699+San+Antonio+Rd,+Palo+Alto,+CA+94306,+USA"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute inset-0 z-10 cursor-pointer"
+                        aria-label="Open location in Google Maps"
+                     />
+                     <iframe
+                        src="https://www.google.com/maps?q=699+San+Antonio+Rd,+Palo+Alto,+CA+94306,+USA&hl=en&z=15&output=embed"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0, pointerEvents: 'none' }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Palo Alto Auto Care Location"
+                     />
+                     <div className="absolute bottom-4 right-4 z-20 bg-white/90 dark:bg-background-dark/90 px-3 py-2 rounded-lg text-xs text-gray-700 dark:text-gray-300 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+                        Haritaya tıklayarak Google Maps&apos;te açın
                      </div>
                   </div>
                </div>
