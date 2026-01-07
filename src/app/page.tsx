@@ -1,5 +1,4 @@
 import Image from 'next/image';
-
 import MobileMenu from '@/components/MobileMenu';
 import ContactForm from '@/components/ContactForm';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
