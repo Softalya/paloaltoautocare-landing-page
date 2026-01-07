@@ -587,14 +587,10 @@ export default function Home() {
          </section>
 
          {/* KEEP YOUR VEHICLE RUNNING SMOOTHLY */}
-         <section className="relative py-24 bg-surface-dark">
+         <section className="relative py-24 bg-surface-dark h-[600px] flex items-center justify-center">
             <div
-               className="absolute inset-0 z-0 opacity-20 bg-cover bg-center"
+               className="absolute inset-0 z-0 bg-cover bg-center bg-[url('/images/palo-alto-auto-care-banner-image.webp')]"
                data-alt="Close up of mechanic hands shaking with a customer hands over car keys"
-               style={{
-                  backgroundImage:
-                     'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDizgTQ8RbDfN7-sWJmYJo3dRYRdtAlnxkcXNvyfNEDfBmWCN_F7FPksF7HEi2JQO7h1HOlTJkmoyOsbE5RNu2VsEpPIteoMAF5Bdp0u3ZF4Qh3jY9OFgUeD5Wj09CUwYmOcDTC3QEPX9YK23uR0fm_ONvwCv_6lhqkY5GFTp6xV6g-iyiSZuOFDjPX8_LmqFepkao3A1vEqnvUnvBMqP2Dxi8SSsrRSr3tLjUF3FVtoFHu-HCxy_whhsKz_23QeZyw5bOqyFJeLXs")',
-               }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent z-10" />
             <div className="relative z-20 layout-container px-4 sm:px-6 lg:px-40 mx-auto max-w-5xl text-center">
